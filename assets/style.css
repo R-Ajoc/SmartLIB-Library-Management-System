@@ -1,0 +1,142 @@
+/* Transparent navbar for both desktop & mobile */
+.transparent-navbar {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+/* Desktop logo */
+.navbar .logo {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    margin-left: 50px;
+}
+
+/* Mobile logo inside toggle */
+.logo-mobile {
+    max-height: 50px;
+    width: auto;
+    display: inline-block;
+}
+
+/* Navbar links */
+.navbar .nav-link {
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+
+/* Make the collapse menu always have a background, but transparent until opened */
+.navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.85); /* semi-transparent black */
+    border-radius: 8px;
+    transition: all 0.3s ease; /* smooth fade */
+}
+
+/* Desktop navbar: keep transparent */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        background-color: transparent !important;
+        position: static;
+        width: auto;
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+/* Mobile navbar: background only when collapsed */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.85); /* semi-transparent black */
+        border-radius: 8px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 999; 
+        transition: all 0.3s ease;
+    }
+
+    .navbar-collapse.collapse:not(.show) {
+        display: none;
+    }
+}
+
+/* Main section full height */
+.main-section {
+    height: 100vh;
+    margin-top: 0; /* navbar is fixed, no gap needed */
+}
+
+/* Left side background image 30% width */
+.left-side {
+    width: 30%;
+    background-image: url('../assets/images/bg_image.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+/* Right side login 70% width */
+.right-side {
+    width: 70%;
+    height: 100%;
+    background-color: #7a0000; /* maroon background */
+}
+
+/* Login form */
+.login-form {
+    max-width: 280px;
+}
+
+/* Make login form fields and button smaller, add spacing */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+    margin-bottom: 1rem; /* more space between fields */
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    box-shadow: 0 0 0 2px #ffc107; /* yellow shadow */
+    border-color: #ffc107;
+    outline: none;
+}
+
+.login-form .form-check {
+    font-size: 0.90rem;
+    margin-top: 1.2rem; /* more space below checkbox */
+}
+
+.login-form button[type="submit"] {
+    font-size: 0.95rem;
+    padding: 0.45rem 1.2rem;
+    margin-top: 2rem;      /* increase space above button */
+    margin-bottom: 1rem; /* decrease space below button */
+}
+
+/* Titles */
+.welcome-title {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-top: 5rem; /* Adds space below navbar */
+}
+
+.subtitle {
+    color: #ffc107;
+    font-size: 16px;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 991px) {
+    .left-side {
+        display: none;
+    }
+    .right-side {
+        width: 100%;
+    }
+}

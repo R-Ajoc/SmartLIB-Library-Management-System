@@ -1,0 +1,241 @@
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20%; 
+  background-color: #7a0000; 
+  color: #ffcc00; 
+  padding: 20px;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar Title */
+.sidebar-title-container {
+  text-align: center;
+}
+
+.sidebar-title {
+  width: 100%;
+  height: 60px;
+  color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: 'League Spartan', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Sidebar Links */
+.sidebar .nav-link {
+  color: #ffcc00;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-left: 18px;
+}
+
+.sidebar .nav-link.active {
+  background-color: #fff6ea;
+  color: #7a0000;
+}
+
+/* Bottom Section */
+.sidebar-bottom {
+  margin-top: auto; 
+}
+
+.sidebar-bottom .nav-link {
+  color: #ffcc00;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar-bottom .nav-link:hover {
+  background-color: transparent;
+  color: #fff6ea;
+  text-shadow: none;
+}
+
+/* Mobile Offcanvas Version */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; 
+  }
+
+  .offcanvas-sidebar {
+    background-color: #7a0000;
+    color: #ffcc00;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .offcanvas-sidebar .nav-link {
+    color: #ffcc00;
+  }
+
+  .offcanvas-sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  .offcanvas-sidebar .logo-mobile {
+    max-width: 120px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .offcanvas-bottom-links {
+    margin-top: auto;
+  }
+}
+
+/* Offcanvas Header Layout Fix */
+.offcanvas-header {
+  padding: 0.75rem 1rem;
+}
+
+.offcanvas-header .sidebar-title {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.offcanvas-header .btn-close {
+  filter: invert(1); 
+  opacity: 0.9;
+}
+
+
+.offcanvas-header .d-flex.align-items-center {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Mobile Toggle Button */
+.toggle-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    background-color: #7a0000;
+    color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
+}
+
+/* Main Content Styling */
+
+/* Make body and html full height for flex layout */
+/* Reset and full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'League Spartan', sans-serif;
+  background-color: #fff6ea;
+
+  /* Make body a flex column to push footer to bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper for sidebar + main content */
+.dashboard-wrapper {
+  display: flex;
+  flex: 1 0 auto; /* flex-grow:1, flex-shrink:0, auto basis */
+  min-height: 0;   /* allows proper scrolling */
+}
+
+/* Main content */
+.main-content {
+  margin-left: 20%; /* leave space for sidebar */
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* expand to fill remaining vertical space */
+  min-height: 100%;     
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease;
+  padding: 10px;
+}
+
+/* Header */
+.dashboard-header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header img {
+  max-height: 30px;
+}
+
+/* Content area */
+.content-area {
+  flex: 1 0 auto;  /* stretch to push footer down */
+  overflow: auto;  /* scroll if content taller than viewport */
+}
+
+/* Footer */
+.dashboard-footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;        /* optional vertical spacing */
+  margin: 0;
+  
+  /* Make footer width match main content */
+  width: calc(100% - 20%);  /* full viewport minus sidebar width */
+  margin-left: 20%;          /* push it next to sidebar */
+
+  flex-shrink: 0;            /* don’t shrink */
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-footer {
+    width: 100%;   /* full width */
+    margin-left: 0; /* remove leftover space from sidebar */
+  }
+}
+
