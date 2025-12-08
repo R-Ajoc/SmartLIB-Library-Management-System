@@ -1,0 +1,144 @@
+:root {
+    --color-primary-base: #2C3E50;  
+    --color-secondary-base: #FFFFFF; 
+    --color-primary-text: #2C3E50; 
+    --color-accent-pop: #DAA520; 
+    --color-subtle-highlight: #DCDCDC; 
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--color-primary-base); 
+}
+
+.main-container {
+    padding: 20px;
+}
+
+.signup-card {
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    background: var(--color-secondary-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary-text); 
+    margin-bottom: 0.5rem;
+}
+
+.login-logo {
+    max-width: 220px; 
+    height: auto;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-content p {
+    font-size: 1rem;
+    color: #495057;
+}
+
+.form-step h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary-text); 
+    border-bottom: 1px solid var(--color-subtle-highlight);
+    padding-bottom: 10px;
+    margin-bottom: 20px !important;
+}
+
+.signup-form .form-control,
+.signip-form .form-select {
+    border-radius: 4px;
+    border: 1px solid #CED4DA;
+    padding: 12px 15px;
+    background-color: #FAFBFC;
+}
+
+.btn-custom {
+    background-color: var(--color-primary-text); 
+    color: var(--color-accent-pop); 
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #1F2E3C; 
+    color: var(--color-secondary-base); 
+}
+
+.btn-secondary {
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #E9ECEF;
+    color: #6C757D;
+    border: 1px solid #CED4DA;
+}
+
+.login-link a {
+    color: var(--color-primary-text);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.step-indicator {
+    text-align: center;
+}
+
+.step-dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: var(--color-subtle-highlight);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.step-dot.active {
+    background-color: var(--color-accent-pop);
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.login-card {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    background: var(--color-secondary-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-check-lable {
+    font-size: 0.95rem;
+    color: #495057; 
+}
+
+.forgot-link {
+    color: var(--color-primary-text);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+    color: var(--color-accent-pop);
+}

@@ -1,0 +1,210 @@
+:root {
+    --color-primary-base: #F4F6F9;  
+    --color-secondary-base: #FFFFFF; 
+    --color-primary-text: #2C3E50; 
+    --color-accent-pop: #DAA520;   
+    --color-subtle-highlight: #DCDCDC;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar-dark {
+    background-color: var(--color-primary-text);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    margin: 0 15px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.dropdown-toggle,
+.custom-toggler {
+    color: var(--color-secondary-base);
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--color-accent-pop);
+}
+
+/* --- DROPDOWN MENU ITEM STYLES --- */
+.navbar-nav .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--color-primary-text);
+    font-weight: 500;
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus {
+    background-color: var(--color-primary-base); 
+    color: var(--color-primary-text);
+}
+
+.navbar-nav .dropdown-item:active {
+    background-color: var(--color-accent-pop);
+    color: var(--color-secondary-base); 
+}
+
+/* --- TAB LINK STYLES --- */
+.nav-tabs .nav-link {
+    color: var(--color-primary-text); 
+    font-weight: 500;
+    border: none;
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+
+.nav-tabs .nav-link.active {
+    background-color: var(--color-secondary-base); 
+    color: var(--color-accent-pop); 
+    border-bottom: 3px solid var(--color-accent-pop) !important; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+.nav-tabs .nav-link:hover {
+    color: var(--color-accent-pop); 
+    border-color: transparent;
+}
+
+/* --- DASHBOARD/BODY STYLES --- */
+body.dashboard-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding-bottom: 2rem;
+}
+
+.dashboard-body {
+    background-color: var(--color-primary-base);
+}
+
+.dashboard-body h1, h2 {
+    color: var(--color-primary-text) !important;
+    font-weight: 700;
+}
+
+.dashboard-body p {
+    color: #495057 !important;
+}
+
+.card-title, .text-xs {
+    color: var(--color-primary-text) !important;
+}
+
+/* --- LIBRARY CATALOG STYLES --- */
+
+.catalog-constrained-width {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-input::placeholder {
+    font-size: 1rem;
+    color: #888;
+}
+
+header.row.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Individual Book Item (Card) Styling */
+.book-item {
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+    align-items: flex-start;
+    background-color: var(--color-secondary-base); 
+    border: 1px solid var(--color-subtle-highlight);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.book-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-left {
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.book-cover,
+.book-cover-placeholder {
+    width: 100px;
+    height: 140px;
+    border: 1px solid #CED4DA;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.book-details {
+    padding-left: 15px;
+}
+
+.book-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 3px;
+    color: var(--color-primary-text); 
+}
+
+.book-item .book-meta {
+    color: #495057 !important; 
+    font-size: 0.8rem; 
+    margin-bottom: 5px;
+}
+
+
+.book-item .book-description {
+    color: #495057 !important;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.book-item .book-meta span {
+    color: #495057;
+}
+
+/* --- ALERT BLOCKED IN THE RECORD PAGE */
+.alert-blocked {
+    background-color: #FFF8E1; 
+    border: 1px solid #DAA520; 
+    color: var(--color-primary-text); 
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.alert-blocked .fa-lock {
+    color: #DAA520; 
+    margin-right: 10px;
+}
+
+/* Reminders Box  IN THE RECORD PAGE */
+.alert-reminders {
+    background-color: #FFF3CD; 
+    border: 1px solid #DAA520; 
+    color: var(--color-primary-text);
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.alert-reminders .fa-exclamation-triangle {
+    color: #FFC107; 
+}
