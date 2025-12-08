@@ -1,1 +1,0 @@
-studTeach_navbar.php
